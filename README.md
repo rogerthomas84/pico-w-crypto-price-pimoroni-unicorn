@@ -1,6 +1,8 @@
 Pico W crypto price with the Pimoroni Pico W.
 ====
 
+![ETH-USDT Price](images/price-down.png "The price of ETH-USDT")
+
 ### Prerequisites...
 
 * A Pico W
