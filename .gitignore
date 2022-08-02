@@ -1,0 +1,10 @@
+.buildpath
+.settings
+.project
+.vagrant
+.ide
+.idea
+deployment.properties
+.DS_Store
+.pyc
+secrets.py
