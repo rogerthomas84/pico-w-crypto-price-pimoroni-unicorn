@@ -59,7 +59,6 @@ picounicorn.set_pixel(0, 0, 255, 255, 255)
 sleep(2)
 connect()
 
-
 w = picounicorn.get_width()
 h = picounicorn.get_height()
 
@@ -142,6 +141,6 @@ while True:
             x_pos = (char[0] + offset)
             if x_pos > w - 1:
                 continue
-            picounicorn.set_pixel(x_pos, (char[1]+1), rgb[0], rgb[1], rgb[2])
+            picounicorn.set_pixel(x_pos, (char[1] + 1), rgb[0], rgb[1], rgb[2])
         offset += (number_width + 1)
     sleep(3)
