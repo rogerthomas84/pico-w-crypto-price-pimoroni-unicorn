@@ -1,4 +1,4 @@
-Pico W crypto price with the Pimoroni Pico W.
+Show the price of crypto with Pico W and the Pimoroni Unicorn Pack!
 ====
 
 ![ETH-USDT Price](images/price-down.png "The price of ETH-USDT")
