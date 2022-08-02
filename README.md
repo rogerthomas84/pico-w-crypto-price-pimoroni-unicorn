@@ -14,7 +14,7 @@ Pico W crypto price with the Pimoroni Pico W.
 * Ensure you've flashed the latest [Pimoroni Pico W uf2 firmware](https://github.com/pimoroni/pimoroni-pico/releases) to the Pico W. At the time of this repository, it's `1.19.6`.
 * Copy `example.secrets.py` to `secrets.py` and change the values.
 * Follow the tutorial for connecting [Thonny to the Pico W](https://projects.raspberrypi.org/en/projects/getting-started-with-the-pico/2).
-* Copy the files `secrets.py` and `main.py` to the Pico W.
+* Copy the files `secrets.py`, `character_map.py` and `main.py` to the Pico W.
 * Disconnect your Pico W from your computer.
 * Plug into a power source, sit back while the Pico W connects to Wi-Fi and enjoy!
 

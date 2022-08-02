@@ -5,6 +5,7 @@ import urequests
 import picounicorn
 import sys
 import secrets
+from character_map import CHARACTERS
 
 CONNECTED = False
 
@@ -76,54 +77,6 @@ r = 255
 g = 255
 b = 255
 
-chars = {
-    "1": {
-        "width": 3,
-        "chars": [[0, 1], [1, 0], [1, 1], [1, 2], [1, 3], [1, 4], [0, 4], [2, 4]]
-    },
-    "2": {
-        "width": 3,
-        "chars": [[0, 0], [1, 0], [2, 0], [2, 1], [2, 2], [1, 2], [0, 2], [0, 3], [0, 4], [1, 4], [2, 4]]
-    },
-    "3": {
-        "width": 3,
-        "chars": [[0, 0], [1, 0], [2, 0], [2, 1], [2, 2], [1, 2], [0, 2], [2, 3], [2, 4], [1, 4], [0, 4]]
-    },
-    "4": {
-        "width": 3,
-        "chars": [[0, 0], [0, 1], [0, 2], [0, 3], [1, 3], [2, 3], [2, 2], [2, 4]]
-    },
-    "5": {
-        "width": 3,
-        "chars": [[2, 0], [1, 0], [0, 0], [0, 1], [0, 2], [1, 2], [2, 2], [2, 3], [2, 4], [1, 4], [0, 4]]
-    },
-    "6": {
-        "width": 3,
-        "chars": [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [1, 4], [2, 4], [2, 3], [2, 2], [1, 2]]
-    },
-    "7": {
-        "width": 3,
-        "chars": [[0, 0], [1, 0], [2, 0], [2, 1], [1, 2], [0, 3], [0, 4]]
-    },
-    "8": {
-        "width": 3,
-        "chars": [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [1, 4], [2, 4], [2, 3], [2, 2], [1, 2], [2, 1], [2, 0],
-                  [1, 0]]
-    },
-    "9": {
-        "width": 3,
-        "chars": [[0, 0], [0, 1], [0, 2], [1, 2], [2, 2], [1, 0], [2, 0], [2, 1], [2, 3], [2, 4]]
-    },
-    "0": {
-        "width": 3,
-        "chars": [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [1, 4], [2, 4], [2, 3], [2, 2], [2, 1], [2, 0], [1, 0]]
-    },
-    ".": {
-        "width": 1,
-        "chars": [[0, 4]]
-    }
-}
-
 clear_display()
 counter = 0
 while True:
@@ -135,8 +88,8 @@ while True:
     offset = 0
     clear_display()
     for a_number in string_number:
-        number_width = chars[a_number]["width"]
-        characters = chars[a_number]["chars"]
+        number_width = CHARACTERS[a_number]["width"]
+        characters = CHARACTERS[a_number]["chars"]
         for char in characters:
             x_pos = (char[0] + offset)
             if x_pos > w - 1:
