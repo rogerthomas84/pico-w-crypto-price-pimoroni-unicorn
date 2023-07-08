@@ -2,7 +2,7 @@ import network
 import json
 from time import sleep
 import urequests
-import picounicorn
+from picounicorn import PicoUnicorn
 import sys
 import secrets
 from character_map import CHARACTERS
@@ -55,7 +55,7 @@ def get_latest_rgb(current_price):
     return [255, 255, 255]
 
 
-picounicorn.init()
+picounicorn = PicoUnicorn()
 picounicorn.set_pixel(0, 0, 255, 255, 255)
 sleep(2)
 connect()
